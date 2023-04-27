@@ -99,7 +99,7 @@ public class SimulationManager implements Runnable{
     }
 
     public File createFile() throws IOException {
-        File file = new File("simulation.txt");
+        File file = new File("Test3.txt");
         boolean created = file.createNewFile();
         if(created){
             System.out.println("File created");
