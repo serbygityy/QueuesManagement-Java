@@ -74,16 +74,16 @@ public class SimulationManager implements Runnable{
     }
 
     public void generateClients() {
-        Random rand = new Random();
+
         int minA = minArrival;
         int maxA = maxArrival;
         int minS = minService;
         int maxS = maxService;
 
         for(int i = 1; i <= nbClients; i++) {
-            int arrival = (int) Math.random()*(maxA-minA+1)+minA;
+            int arrival = (int) (Math.random()*(maxA-minA)+minA);
             System.out.println(arrival);
-            int service = (int) Math.random()*(maxS-minS+1)+minS;
+            int service = (int) (Math.random()*(maxS-minS)+minS);
             System.out.println(service);
             newClients.add(new Client(i, arrival, service));
             totalService += service;
